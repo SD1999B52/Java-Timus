@@ -1,5 +1,22 @@
-class ex_1712 {
+/*
+1712. Шифровальная решётка(Accepted)
+*/
+
+import java.util.Scanner;
+
+public class ex_1712 {
 	public static void main( String[] args ) {
+		Scanner in = new Scanner( System.in );
+		String[][] lattice = new String[4][4];
+		String[][] key = new String[4][4];
+		for ( int i = 0; i < 4; i++ ) {
+			lattice[i] = in.nextLine().split( "" );
+		}
+		for ( int i = 0; i < 4; i++ ) {
+			key[i] = in.nextLine().split( "" );
+		}
+		
+		/*
 		String[][] lattice = {
 			{ ".", ".", ".", "." },
 			{ "X", ".", ".", "X" },
@@ -13,7 +30,7 @@ class ex_1712 {
 			{ "s", "m", "r", "s" },
 			{ "o", "d", "b", "k" }
 		};
-		
+		*/
 		String text = "";
 		for ( int ri = 0; ri < key.length; ri++ ) {
 			for ( int i = 0; i < key.length; i++ ) {

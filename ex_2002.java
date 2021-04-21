@@ -1,11 +1,19 @@
-//2002. Тестовое задание
+//2002. Тестовое задание(Accepted)
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
-class ex_2002 {
+public class ex_2002 {
 	static ArrayList<String> data = new ArrayList<String>();
 	
 	public static void main( String[] args ) {
+		Scanner in = new Scanner( System.in );
+		int num = Integer.parseInt( in.nextLine());
+		String[] querys = new String[num];
+		for ( int i = 0; i < num; i++ ) {
+			querys[i] = in.nextLine();
+		}
+		/*
 		String[] querys = {
 			"register vasya 12345",
 			"login vasya 1234",
@@ -14,7 +22,7 @@ class ex_2002 {
 			"logout vasya",
 			"logout vasya"
 		};
-		
+		*/
 		for ( int i = 0; i < querys.length; i++ ) {
 			String command = getSplitQuery( querys[i], 0 );
 			

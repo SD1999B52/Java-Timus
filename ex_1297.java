@@ -1,10 +1,13 @@
 //1297. Палиндромы
+//qwertypoETEopytrewq
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
-class ex_1297 {
+public class ex_1297 {
 	public static void main( String[] args ) {
-		String text = "Kazak";
+		Scanner in = new Scanner( System.in );
+		String text = in.nextLine();
 		
 		ArrayList<String> palindroms = new ArrayList<String>();
 		int maxlength = 0;

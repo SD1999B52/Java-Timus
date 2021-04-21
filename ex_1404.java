@@ -1,11 +1,18 @@
-//1404. Легко взломать!
-class ex_1404 {
+//1404. Легко взломать!(Accepted)
+
+import java.util.Scanner;
+
+public class ex_1404 {
 	public static void main( String[] args ) {
-		String text = "secret";
-		String code = "";
+		Scanner in = new Scanner( System.in );
+		String code = in.nextLine();
+		
+		//String text = "secret";
+		//String code = "";
 		String decode = "";
 		
 		//туда
+		/*
 		int[] codes = new int[text.length()];
 		for ( int i = 0; i < text.length(); i++ ) {
 			codes[i] = (int)( text.charAt( i )) - 97;
@@ -19,7 +26,7 @@ class ex_1404 {
 			}
 			code += (char)( codes[i] + 97 );
 		}
-		
+		*/
 		//обратно
 		int temp = 0;
 		for ( int i = 0; i < code.length(); i++ ) {
@@ -34,7 +41,7 @@ class ex_1404 {
 			decode += (char)( temp + 97 );
 		}
 		
-		System.out.println( code );
+		//System.out.println( code );
 		System.out.println( decode );
 	}
 }

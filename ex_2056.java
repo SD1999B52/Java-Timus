@@ -1,11 +1,16 @@
-//2056. Стипендия
-class ex_2056 {
+//2056. Стипендия(Accepted)
+
+import java.util.Scanner;
+
+public class ex_2056 {
 	public static void main( String[] args ) {
-		int[] array1 = { 5, 5, 4 };
-		int[] array2 = { 3, 3, 3 };
-		
-		System.out.println( grant( array1 ));
-		System.out.println( grant( array2 ));
+		Scanner in = new Scanner( System.in );
+		int num = in.nextInt();
+		int[] array = new int[num];
+		for ( int i = 0; i < num; i++ ) {
+			array[i] = in.nextInt();
+		}
+		System.out.println( grant( array ));
 	}
 	
 	public static String grant( int[] mark ) {
@@ -31,7 +36,7 @@ class ex_2056 {
 		for ( int i = 0; i < mark.length; i++ ) {
 			sumScore += mark[i];
 		}
-		double avScore = sumScore / ( mark.length - 1 );
+		double avScore = sumScore / mark.length;
 		if ( avScore >= 4.5 ) {
 			return "High";
 		}

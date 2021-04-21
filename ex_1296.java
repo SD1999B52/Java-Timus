@@ -1,15 +1,23 @@
-//1296. Гиперпереход
-class ex_1296 {
+//1296. Гиперпереход(Accepted)
+
+import java.util.Scanner;
+
+public class ex_1296 {
 	public static void main( String[] args ) {
-		int[] data1 = { 10, 31, -41, 59, 26, -53, 58, 97, -93, -23, 84 };
-		int[] data2 = { 3, -1, -5, -6 };
-		System.out.println( MaxGravPot( data1 ));
-		System.out.println( MaxGravPot( data2 ));
+		Scanner in = new Scanner( System.in );
+		int num = Integer.parseInt( in.nextLine());
+		int[] lines = new int[num];
+		
+		for ( int i = 0; i < num; i++ ) {
+			lines[i] = Integer.parseInt( in.nextLine());
+		}
+		
+		System.out.println( maxGravPot( lines ));
 	}
 	
-	public static int MaxGravPot( int[] data ) {
+	public static int maxGravPot( int[] data ) {
 		int sum = 0, answer = 0;
-		for ( int i = 1; i < data.length; i++ ) {
+		for ( int i = 0; i < data.length; i++ ) {
 			sum += data[i];
 			if ( sum < 0 ) {
 				sum = 0;

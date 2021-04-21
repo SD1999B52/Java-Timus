@@ -1,55 +1,24 @@
 /*
-1203. Научная конференция
+1203. Научная конференция(не укладывается по времени)
 */
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
-class ex_1203 {
+public class ex_1203 {
 	public static void main( String[] args ) {
-		int[][] time1 = {
-			{ 3, 4 },
-			{ 1, 5 },
-			{ 6, 7 },
-			{ 4, 5 },
-			{ 1, 3 },
-		};
+		Scanner in = new Scanner( System.in );
+		int num = Integer.parseInt( in.nextLine());
+		int[][] time = new int[num][2];
 		
-		int[][] time2 = {
-			{ 1, 5 },
-			{ 2, 5 },
-			{ 3, 5 }
-		};
-
-		int[][] time3 = {
-			{ 1, 8 },
-			{ 2, 3 },
-			{ 4, 5 },
-			{ 6, 7 },
-			{ 9, 10 }
-		};
+		for ( int i = 0; i < num; i++ ) {
+			String line = in.nextLine();
+			String[] value = line.split( " " );
+			time[i][0] = Integer.parseInt( value[0] );
+			time[i][1] = Integer.parseInt( value[1] );
+		}
 		
-		int[][] time4 = {
-			{ 1, 90 },
-			{ 91, 125 },
-			{ 129, 200 },
-			{ 3, 130 },
-			{ 140, 150 },
-			{ 160, 162 },
-			{ 201, 202 }
-		};
-		
-		int[][] time5 = {
-			{ 1, 5 },
-			{ 6, 7 },
-			{ 2, 3 },
-			{ 4, 5 }
-		};
-		
-		getMaxNumOfReports( time1 );
-		getMaxNumOfReports( time2 );
-		getMaxNumOfReports( time3 );
-		getMaxNumOfReports( time4 );
-		getMaxNumOfReports( time5 );
+		getMaxNumOfReports( time );
 	}
 	
 	public static void getMaxNumOfReports( int[][] time ) {
@@ -94,10 +63,8 @@ class ex_1203 {
 			
 			//добавляем интервал
 			timeS.add( new int[] { minS.get( index )[0], minS.get( index )[1] } );
-			
-			System.out.print( minS.get( index )[0] + "-" + minS.get( index )[1] + " " );
 		}
 		
-		System.out.println( "\nMaximum number of reports: " + timeS.size());
+		System.out.println( timeS.size());
 	}
 }

@@ -1,21 +1,22 @@
-//1585. Пингвины
-class ex_1585 {
+//1585. Пингвины(Accepted)
+
+import java.util.Scanner;
+
+public class ex_1585 {
 	public static void main( String[] args ) {
-		String[] array = {
-			"Emperor Penguin",
-			"Macaroni Penguin",
-			"Little Penguin",
-			"Emperor Penguin",
-			"Macaroni Penguin",
-			"Macaroni Penguin",
-			"Little Penguin"
-		};
+		Scanner in = new Scanner( System.in );
+		int numLines = Integer.parseInt( in.nextLine());
+		String[] array = new String[numLines];
 		
 		String[] types = {
 			"Emperor Penguin",
 			"Macaroni Penguin",
 			"Little Penguin"
 		};
+		
+		for ( int i = 0; i < numLines; i++ ) {
+			array[i] = in.nextLine();
+		}
 		
 		int[] num = new int[types.length];
 		for ( int i = 0; i < types.length; i++ ) {

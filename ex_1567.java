@@ -1,7 +1,11 @@
-//1567. SMS-спам
-class ex_1567 {
+//1567. SMS-спам(Accepted)
+
+import java.util.Scanner;
+
+public class ex_1567 {
 	public static void main( String[] args ) {
-		String text = "pokupaite gvozdi tolko v kompanii gvozdederov i tovarischi!";
+		Scanner in = new Scanner( System.in );
+		String text = in.nextLine();
 		char[][] array = {
 			{ '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '#' },
 			{ 'a', 'd', 'g', 'j', 'm', 'p', 's', 'v', 'y', '.', ' ' },

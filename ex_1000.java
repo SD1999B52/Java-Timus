@@ -1,24 +1,16 @@
-//1607. Такси(Accepted)
+/*
+1000. A+B Problem(Accepted)
+*/
 
 import java.util.Scanner;
 
-public class ex_1607 {
+public class ex_1000 {
 	public static void main( String[] args ) {
 		Scanner in = new Scanner( System.in );
 		String line = in.nextLine();
 		String[] value = line.split( " " );
 		int a = Integer.parseInt( value[0] );
 		int b = Integer.parseInt( value[1] );
-		int c = Integer.parseInt( value[2] );
-		int d = Integer.parseInt( value[3] );
-		
-		while ( a <= c ) {
-			a = a + b;
-			if ( a > c ) {
-				a = c;
-			}
-			c = c - d;
-		}
-		System.out.println( a );
+		System.out.println( a + b );
 	}
 }
