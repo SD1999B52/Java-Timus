@@ -1,6 +1,4 @@
-/*
-1083. Факториалы!!!(Accepted)
-*/
+//1083. Факториалы!!!(Accepted)
 
 import java.util.Scanner;
 
