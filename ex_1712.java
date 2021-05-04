@@ -1,6 +1,4 @@
-/*
-1712. Шифровальная решётка(Accepted)
-*/
+//1712. Шифровальная решётка(Accepted)
 
 import java.util.Scanner;
 
