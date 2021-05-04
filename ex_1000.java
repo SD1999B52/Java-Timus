@@ -1,6 +1,4 @@
-/*
-1000. A+B Problem(Accepted)
-*/
+//1000. A+B Problem(Accepted)
 
 import java.util.Scanner;
 
