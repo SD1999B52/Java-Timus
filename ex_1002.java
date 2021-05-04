@@ -1,6 +1,4 @@
-/*
-1002. Телефонные номера(Accepted)
-*/
+//1002. Телефонные номера(Accepted)
 
 import java.util.Scanner;
 import java.util.ArrayList;
